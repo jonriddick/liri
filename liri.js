@@ -115,7 +115,14 @@ if (process.argv[2] === "movie-this"){
 			console.log("Title: " + JSON.parse(body).Title);
 			console.log("Release Year: " + JSON.parse(body).Year);
 			console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
-			console.log("Rotten Tomatoes Rating: " + JSON.parse(body).Ratings[1].Value);
+			var rotten;
+				if(!JSON.parse(body).Ratings || !JSON.parse(body).Ratings[1]){
+					rotten = "No Rotten Tomatoes Score"
+				}
+				else {
+					rotten = JSON.parse(body).Ratings[1].Value
+				}
+			console.log("Rotten Tomatoes Rating: " + rotten);
 			console.log("Produced in: " + JSON.parse(body).Country);
 			console.log("Language: " + JSON.parse(body).Language);
 			console.log("Plot: " + JSON.parse(body).Plot);
@@ -124,6 +131,17 @@ if (process.argv[2] === "movie-this"){
 		else{
 			console.log("WTF???")
 		}
+
+		var rotten;
+		if(!JSON.parse(body).Ratings || !JSON.parse(body).Ratings[1]){
+			rotten = "No Rotten Tomatoes Score"
+		}
+		else {
+			rotten = JSON.parse(body).Ratings[1].Value
+		}
+
+		console.log("Rotten Tomatoes Rating: " + rotten);
+		
 	});
 };
 
@@ -179,4 +197,4 @@ spotifyIt(song);
 
 
 
-}
+} 
