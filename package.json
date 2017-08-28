@@ -1,0 +1,29 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "liri is a language interpretation and recognition interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonriddick/liri.git"
+  },
+  "keywords": [
+    "liri",
+    "language",
+    "interpretation"
+  ],
+  "author": "jon riddick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonriddick/liri/issues"
+  },
+  "homepage": "https://github.com/jonriddick/liri#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.81.0",
+    "twitter": "^1.7.1"
+  }
+}
